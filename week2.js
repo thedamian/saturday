@@ -1,7 +1,8 @@
+//creating an array of objects 
 let students = [
    {
     name: "maxxxx",
-    here: true
+    here: true  // are they here right now
    },
    {
     name: "pam",
@@ -9,13 +10,18 @@ let students = [
    }
 ]
 
-function getStudentsNames(studentsArray) {
+// returns an array of strings with student's name only from the student array 
+//function getStudentsNames(studentsArray) {
+const getStudentsNames = (studentsArray) => {
     let studentName = []
     for (let i=0;i<studentsArray.length;i++) {
         studentName.push(studentsArray[i].name)
     }
-    return studentName;
+    return studentName
 }
 
-
-console.log(getStudentsNames(students))
+//print out what the getStudentsname returns
+// console.log(getStudentsNames(students))
+const studentsnames = getStudentsNames(students)
+console.table(studentsnames)
+console.table(students)
